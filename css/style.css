@@ -12,14 +12,16 @@ body, html {
     background-color: black;
     padding: 20px;
     height: 100%;
-    overflow: auto;
-    position: relative;  
+    overflow: visible;
+    position: relative;
 }
+
 .cursor {
     position: absolute;
     right: 0;
-    border-right: 4px solid red; /* Adjust the color as needed */
+    border-right: 4px solid red; /* Change color if needed */
     animation: blink 1s steps(1) infinite;
+    z-index: 1000; /* Ensure it's on top */
   }
   
   @keyframes blink {
@@ -27,7 +29,6 @@ body, html {
       border-color: transparent;
     }
   }
- 
   
 li {
     list-style-type: none;

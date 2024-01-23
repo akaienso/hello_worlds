@@ -53,53 +53,56 @@ function getRandomAdjacentKey(key) {
 
 // Function to simulate typing with random lags, typos, and corrections
 function typeSyntax(syntax, terminalElement, cursorElement) {
-  let i = 0;
-  let isTypo = false;
-  return new Promise((resolve) => {
-    const interval = setInterval(() => {
-      // Update cursor position
-      cursorElement.style.right = "0px";
-      if (i < syntax.length) {
-        if (!isTypo && Math.random() < 0.1) {
-          // Introduce a typo
-          const correctKey = syntax[i].toLowerCase(); // Get the correct key (in lowercase)
-          const typoKey = getRandomAdjacentKey(correctKey); // Get a random adjacent key
-          terminalElement.textContent += typoKey; // Add the typo
-          isTypo = true;
-        } else {
-          if (isTypo) {
-            terminalElement.textContent = terminalElement.textContent.slice(
-              0,
-              -1
-            ); // Remove typo
-            isTypo = false;
-          } else {
-            terminalElement.textContent += syntax[i++];
-          }
-        }
-      } else {
-        clearInterval(interval);
-        resolve();
-      }
-    }, Math.random() * 140 + 60); // Random delay speed between 60-260ms
-  });
+    let i = 0;
+    let isTypo = false;
+    const averageCharWidth = 10; // Adjust this based on your font
+
+    return new Promise(resolve => {
+        const interval = setInterval(() => {
+            if (i < syntax.length) {
+                if (!isTypo && Math.random() < 0.1) { // Introduce a typo
+                    const correctKey = syntax[i].toLowerCase(); // Get the correct key (in lowercase)
+                    const typoKey = getRandomAdjacentKey(correctKey); // Get a random adjacent key
+                    terminalElement.textContent += typoKey; // Add the typo
+                    isTypo = true;
+                } else {
+                    if (isTypo) {
+                        terminalElement.textContent = terminalElement.textContent.slice(0, -1); // Remove typo
+                        isTypo = false;
+                    } else {
+                        terminalElement.textContent += syntax[i++];
+                    }
+                }
+
+                // Update cursor position
+                const textLength = terminalElement.textContent.length;
+                cursorElement.style.right = ((syntax.length - textLength) * averageCharWidth) + 'px';
+            } else {
+                clearInterval(interval);
+                resolve();
+            }
+        }, Math.random() * 200 + 60); // Random delay
+    });
 }
 
 // Function to erase the typed syntax
 function eraseSyntax(terminalElement, cursorElement) {
-  return new Promise((resolve) => {
-    const interval = setInterval(() => {
-      // Update cursor position
-      cursorElement.style.right =
-        terminalElement.textContent.length * 10 + "px";
-      if (terminalElement.textContent.length > 0) {
-        terminalElement.textContent = terminalElement.textContent.slice(0, -1);
-      } else {
-        clearInterval(interval);
-        resolve();
-      }
-    }, 30); // Rapid backspace
-  });
+    const averageCharWidth = 10; // Adjust this based on your font
+
+    return new Promise(resolve => {
+        const interval = setInterval(() => {
+            if (terminalElement.textContent.length > 0) {
+                terminalElement.textContent = terminalElement.textContent.slice(0, -1);
+
+                // Update cursor position
+                const textLength = terminalElement.textContent.length;
+                cursorElement.style.right = (textLength * averageCharWidth) + 'px';
+            } else {
+                clearInterval(interval);
+                resolve();
+            }
+        }, 30); // Rapid backspace
+    });
 }
 
 // Main function to start the simulation
@@ -123,6 +126,34 @@ async function startSimulation() {
 }
 
 // Adding DOMContentLoaded event listener to start the simulation
-document.addEventListener("DOMContentLoaded", (event) => {
-  startSimulation();
+document.addEventListener('DOMContentLoaded', (event) => {
+    
+    const observer = new MutationObserver((mutations, observer) => {
+        for (let mutation of mutations) {
+            if (mutation.type === 'childList') {
+                // Check for removed nodes
+                if (mutation.removedNodes.length > 0) {
+                    for (let node of mutation.removedNodes) {
+                        if (node.classList && node.classList.contains('cursor')) {
+                            console.log('Cursor element was removed!', node);
+                        }
+                    }
+                }
+            }
+        }
+    });
+    
+    const config = { childList: true, subtree: true };
+    const targetNode = document.querySelector('.terminal'); // Adjust as needed
+
+    observer.observe(targetNode, config);
+
+    const cursorElement = document.querySelector('.terminal .cursor');
+    console.log(cursorElement); // Check if it logs the element
+    startSimulation(); // Or your function that needs the cursorElement
 });
+
+window.addEventListener('beforeunload', () => {
+    observer.disconnect();
+});
+
