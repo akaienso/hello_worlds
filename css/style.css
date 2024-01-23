@@ -15,11 +15,10 @@ body, html {
     overflow: auto;
     position: relative;  
 }
-  
 .cursor {
     position: absolute;
     right: 0;
-    border-right: 2px solid rgb(218, 218, 218); /* Adjust the color as needed */
+    border-right: 4px solid red; /* Adjust the color as needed */
     animation: blink 1s steps(1) infinite;
   }
   
@@ -28,6 +27,7 @@ body, html {
       border-color: transparent;
     }
   }
+ 
   
 li {
     list-style-type: none;
