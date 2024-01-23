@@ -1,0 +1,227 @@
+[
+    {
+        "name": "PHP",
+        "syntax": "echo \"Hello, world.\"; // PHP",
+        "link": "https://www.php.net/manual/en/"
+    },
+    {
+        "name": "Python",
+        "syntax": "print(\"Hello, world.\") # Python",
+        "link": "https://docs.python.org/3/"
+    },
+    {
+        "name": "JavaScript",
+        "syntax": "console.log(\"Hello, world.\"); // JavaScript",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+    },
+    {
+        "name": "Ruby",
+        "syntax": "puts \"Hello, world.\"# Ruby",
+        "link": "https://www.ruby-lang.org/en/documentation/"
+    },
+    {
+        "name": "Java",
+        "syntax": "System.out.println(\"Hello, world.\"); // Java",
+        "link": "https://docs.oracle.com/javase/8/docs/api/"
+    },
+    {
+        "name": "Swift",
+        "syntax": "print(\"Hello, world.\") // Swift",
+        "link": "https://swift.org/documentation/"
+    },
+    {
+        "name": "Kotlin",
+        "syntax": "println(\"Hello, world.\") // Kotlin",
+        "link": "https://kotlinlang.org/docs/reference/"
+    },
+    {
+        "name": "Perl",
+        "syntax": "print \"Hello, world.\\n\"; # Perl",
+        "link": "https://www.perl.org/docs.html"
+    },
+    {
+        "name": "Lua",
+        "syntax": "print(\"Hello, world.\") -- Lua",
+        "link": "https://www.lua.org/manual/5.4/"
+    },
+    {
+        "name": "Haskell",
+        "syntax": "main = putStrLn \"Hello, world.\"-- Haskell",
+        "link": "https://www.haskell.org/documentation/"
+    },
+    {
+        "name": "Elixir",
+        "syntax": "IO.puts \"Hello, world.\"# Elixir",
+        "link": "https://elixir-lang.org/docs.html"
+    },
+    {
+        "name": "Scala",
+        "syntax": "println(\"Hello, world.\") // Scala",
+        "link": "https://docs.scala-lang.org/"
+    },
+    {
+        "name": "Groovy",
+        "syntax": "println \"Hello, world.\"// Groovy",
+        "link": "http://groovy-lang.org/documentation.html"
+    },
+    {
+        "name": "Erlang",
+        "syntax": "io:fwrite(\"Hello, world.\\n\"). % Erlang",
+        "link": "https://www.erlang.org/doc"
+    },
+    {
+        "name": "Clojure",
+        "syntax": "(println \"Hello, world.\") ; Clojure",
+        "link": "https://clojure.org/api/api"
+    },
+    {
+        "name": "Dart",
+        "syntax": "print('Hello, world.'); // Dart",
+        "link": "https://dart.dev/guides"
+    },
+    {
+        "name": "Objective-C",
+        "syntax": "NSLog(@\"Hello, world.\"); // Objective-C",
+        "link": "https://developer.apple.com/documentation/objectivec"
+    },
+    {
+        "name": "Pascal",
+        "syntax": "writeln('Hello, world.'); // Pascal",
+        "link": "https://www.freepascal.org/docs.html"
+    },
+    {
+        "name": "Prolog",
+        "syntax": "write('Hello, world.'), nl. % Prolog",
+        "link": "https://www.swi-prolog.org/pldoc/"
+    },
+    {
+        "name": "Scheme",
+        "syntax": "(display \"Hello, world.\") (newline) ; Scheme",
+        "link": "https://www.scheme.com/tspl4/"
+    },
+    {
+        "name": "C",
+        "syntax": "printf(\"Hello, world.\\n\"); // C",
+        "link": "http://www.open-std.org/jtc1/sc22/wg14/"
+    },
+    {
+        "name": "C++",
+        "syntax": "std::cout << \"Hello, world.\" << std::endl; // C++",
+        "link": "https://isocpp.org/std/the-standard"
+    },
+    {
+        "name": "C#",
+        "syntax": "Console.WriteLine(\"Hello, world.\"); // C#",
+        "link": "https://docs.microsoft.com/en-us/dotnet/csharp/"
+    },
+    {
+        "name": "Go",
+        "syntax": "fmt.Println(\"Hello, world.\") // Go",
+        "link": "https://golang.org/pkg/"
+    },
+    {
+        "name": "Rust",
+        "syntax": "println!(\"Hello, world.\"); // Rust",
+        "link": "https://www.rust-lang.org/learn"
+    },
+    {
+        "name": "Smalltalk",
+        "syntax": "'Hello, world.' printNl. \" Smalltalk",
+        "link": "http://www.smalltalk.org/main/documentation.html"
+    },
+    {
+        "name": "Ada",
+        "syntax": "Put_Line(\"Hello, world.\"); -- Ada",
+        "link": "https://www.adaic.org/learn/materials/"
+    },
+    {
+        "name": "Assembly",
+        "syntax": "Assembly varies by architecture; // Assembly",
+        "link": "https://www.nasm.us/"
+    },
+    {
+        "name": "COBOL",
+        "syntax": "DISPLAY 'Hello, world.'. *> COBOL",
+        "link": "https://www.microfocus.com/documentation/"
+    },
+    {
+        "name": "Lisp",
+        "syntax": "(print \"Hello, world.\") ; Lisp",
+        "link": "https://common-lisp.net/documentation"
+    },
+    {
+        "name": "Fortran",
+        "syntax": "print *, 'Hello, world.' ! Fortran",
+        "link": "https://gcc.gnu.org/fortran/"
+    },
+    {
+        "name": "R",
+        "syntax": "cat(\"Hello, world.\\n\") # R",
+        "link": "https://www.r-project.org/about.html"
+    },
+    {
+        "name": "Bash",
+        "syntax": "echo \"Hello, world.\" # Bash",
+        "link": "https://www.gnu.org/software/bash/manual/"
+    },
+    {
+        "name": "MATLAB",
+        "syntax": "disp('Hello, world.') % MATLAB",
+        "link": "https://www.mathworks.com/help/matlab/"
+    },
+    {
+        "name": "SQL",
+        "syntax": "SELECT 'Hello, world.'; -- SQL",
+        "link": "https://www.iso.org/standard/63555.html"
+    },
+    {
+        "name": "VHDL",
+        "syntax": "report \"Hello, world.\"; -- VHDL",
+        "link": "https://www.vhdlguide.com/"
+    },
+    {
+        "name": "Verilog",
+        "syntax": "$display(\"Hello, world.\"); // Verilog",
+        "link": "https://www.verilog.com/"
+    },
+    {
+        "name": "F#",
+        "syntax": "printfn \"Hello, world.\" // F#",
+        "link": "https://docs.microsoft.com/en-us/dotnet/fsharp/"
+    },
+    {
+        "name": "Elm",
+        "syntax": "main = text \"Hello, world.\" -- Elm",
+        "link": "https://elm-lang.org/docs"
+    },
+    {
+        "name": "Julia",
+        "syntax": "println(\"Hello, world.\") # Julia",
+        "link": "https://docs.julialang.org/"
+    },
+    {
+        "name": "Crystal",
+        "syntax": "puts \"Hello, world.\" # Crystal",
+        "link": "https://crystal-lang.org/reference/"
+    },
+    {
+        "name": "Nim",
+        "syntax": "echo \"Hello, world.\" # Nim",
+        "link": "https://nim-lang.org/documentation.html"
+    },
+    {
+        "name": "OCaml",
+        "syntax": "print_endline \"Hello, world.\" (* OCaml *)",
+        "link": "https://ocaml.org/learn/tutorials/"
+    },
+    {
+        "name": "Tcl",
+        "syntax": "puts \"Hello, world.\" ;# Tcl",
+        "link": "https://www.tcl.tk/man/tcl8.6/"
+    },
+    {
+        "name": "Brainfuck",
+        "syntax": "+[----->+++<]>+.---.+++++++..+++.[--->+<]>-----.--[--->+<]>.-[-->+++<]>++.+++++++++++++.----------.-[--->+<]>.",
+        "link": "https://esolangs.org/wiki/Brainfuck"
+    }
+]
